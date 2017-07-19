@@ -9,6 +9,8 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
+import com.spotspoon.adapter.CustomViewPager;
+import com.spotspoon.adapter.CustomViewPagerWithTabs;
 import com.spotspoon.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -29,8 +31,26 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         mActivityBinding.navigationView.setNavigationItemSelectedListener(this);
         getSupportActionBar().setTitle(R.string.title_home);
+        setViewPager();
+        setTabs();
     }
 
+
+    public void setViewPager()
+    {
+        CustomViewPager customViewPager=new CustomViewPager(getSupportFragmentManager());
+        mActivityBinding.appbarLayout.viewPager.setAdapter(customViewPager);
+        mActivityBinding.appbarLayout.indicator.setViewPager(mActivityBinding.appbarLayout.viewPager);
+
+    }
+
+
+    public void setTabs()
+    {
+        CustomViewPagerWithTabs customViewPager=new CustomViewPagerWithTabs(getSupportFragmentManager());
+        mActivityBinding.appbarLayout.tabs.viewPagerList.setAdapter(customViewPager);
+        mActivityBinding.appbarLayout.tabs.tabLayout.setupWithViewPager(mActivityBinding.appbarLayout.tabs.viewPagerList);
+    }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
