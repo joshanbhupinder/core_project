@@ -17,5 +17,4 @@ return videoList;
 public void setVideoList(List<com.spotspoon.fragment.VideoList> videoList) {
 this.videoList = videoList;
 }
-
 }

@@ -4,15 +4,15 @@
         <item
             android:id="@+id/navigation_item_1"
             android:icon="@drawable/selector_nav_videos"
-            android:title="@string/nav_video" />
+            android:title="@string/video" />
         <item
             android:id="@+id/navigation_item_2"
             android:icon="@drawable/selector_nav_images"
-            android:title="@string/nav_image" />
+            android:title="@string/image" />
         <item
             android:id="@+id/navigation_item_3"
             android:icon="@drawable/selector_nav_milestone"
-            android:title="@string/nav_miletstone" />
+            android:title="@string/miletstone" />
 
         <item
             android:id="@+id/navigation_item_5"

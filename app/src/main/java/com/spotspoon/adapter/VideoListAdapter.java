@@ -6,25 +6,20 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
-
 import com.spotspoon.R;
 import com.spotspoon.databinding.ListItemBinding;
-
 import java.util.List;
 
 
 /**
  * Created by bhupinder on 20/7/17.
  */
-
 public class VideoListAdapter extends RecyclerView.Adapter<VideoListAdapter.ViewHolder> {
 
     private Context mContext;
     private List<com.spotspoon.fragment.VideoList> mList;
-
     public VideoListAdapter(Context context,List<com.spotspoon.fragment.VideoList> list)
     {
-
         mContext=context;
         mList=list;
     }
@@ -45,6 +40,9 @@ public class VideoListAdapter extends RecyclerView.Adapter<VideoListAdapter.View
 
     }
 
+    /*
+    * Dummy images
+    * */
     public void setBackgroundImage(ViewHolder holder,int position)
     {
         switch (position)

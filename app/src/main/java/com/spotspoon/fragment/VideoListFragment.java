@@ -8,13 +8,10 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-
 import com.spotspoon.R;
 import com.spotspoon.databinding.VideoListBinding;
-
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
@@ -32,15 +29,15 @@ public class VideoListFragment extends Fragment
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         mVideoListBinding= DataBindingUtil.bind(inflater.inflate(R.layout.video_list,null));
-        mVideoListBinding.recyleview.setLayoutManager(new LinearLayoutManager(getActivity()));
-        setData();
-        mVideoListBinding.recyleview.setAdapter(new com.spotspoon.fragment.VideoListAdapter(getActivity(),mList));
         return mVideoListBinding.getRoot();
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        mVideoListBinding.recyleview.setLayoutManager(new LinearLayoutManager(getActivity()));
+        setData();
+        mVideoListBinding.recyleview.setAdapter(new com.spotspoon.fragment.VideoListAdapter(getActivity(),mList));
 
     }
 

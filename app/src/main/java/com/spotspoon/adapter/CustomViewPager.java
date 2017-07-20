@@ -5,11 +5,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-
 /**
  * Created by bhupinder on 20/7/17.
  */
-
 public class CustomViewPager extends FragmentStatePagerAdapter {
 
     public CustomViewPager(FragmentManager fm) {
