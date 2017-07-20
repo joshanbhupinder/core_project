@@ -4,8 +4,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.spotspoon.fragment.VideoImageFragment;
 import com.spotspoon.fragment.VideoListFragment;
+
 
 /**
  * Created by bhupinder on 20/7/17.

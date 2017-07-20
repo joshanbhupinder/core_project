@@ -1,10 +1,10 @@
-package com.spotspoon.adapter;
+package com.spotspoon.fragment;
 
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.spotspoon.fragment.VideoImageFragment;
 
 /**
  * Created by bhupinder on 20/7/17.
@@ -18,7 +18,11 @@ public class CustomViewPager extends FragmentStatePagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return new VideoImageFragment();
+        VideoImageFragment  videoImageFragment=new VideoImageFragment();
+        Bundle bundle=new Bundle();
+        bundle.putInt("position",position);
+        videoImageFragment.setArguments(bundle);
+        return videoImageFragment;
     }
 
     @Override

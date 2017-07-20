@@ -3,7 +3,7 @@
 
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="120dp"
         android:background="@color/colorPrimary"
         android:orientation="vertical">
 
@@ -13,13 +13,13 @@
             android:layout_margin="30dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
-            android:layout_marginTop="-1dp"
+            android:layout_marginTop="74dp"
             android:drawableLeft="@drawable/ic_account_circle_white_24dp"
             android:drawablePadding="20dp"
             android:gravity="center_vertical"
             android:text="BHUPINDER"
             android:textColor="@android:color/white"
-            app:layout_constraintHorizontal_bias="0.023"
+            app:layout_constraintHorizontal_bias="0.112"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

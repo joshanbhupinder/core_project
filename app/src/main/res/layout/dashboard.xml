@@ -20,6 +20,7 @@
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
+                app:theme="@style/ToolBarStyle"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:titleTextColor="@android:color/white"
@@ -37,16 +38,23 @@
 
 
 
-       <me.relex.circleindicator.CircleIndicator
+       <com.viewpagerindicator.CirclePageIndicator
         android:id="@+id/indicator"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
            app:layout_constraintTop_toBottomOf="@+id/viewPager"
            app:layout_constraintRight_toRightOf="parent"
-           android:paddingBottom="5dp"
            android:background="@android:color/black"
            app:layout_constraintLeft_toLeftOf="parent"
+           android:paddingTop="5dp"
+           android:paddingBottom="7dp"
+           app:fillColor="@android:color/white"
+           app:pageColor="@android:color/transparent"
+           app:radius="4dp"
           />
+
+
+
 
         <include
             android:id="@+id/tabs"
@@ -55,12 +63,9 @@
             layout="@layout/tabs"
             android:layout_marginTop="7dp"
             app:layout_constraintTop_toBottomOf="@+id/indicator"
-            android:layout_marginRight="8dp"
             app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginLeft="8dp"
             app:layout_constraintLeft_toLeftOf="parent"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp" />
+            />
 
     </android.support.constraint.ConstraintLayout>
 </layout>
